@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Información</title>
+    <style>
+    #formulario-info {
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: brown;
+    }
+    
+    body {background-color: antiquewhite;}
+    label {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        
+    }
+    </style>
+</head>
+<body>
+    <h1 id="formulario-info">Formulario de Información</h1>
+    <form action="forulario.php" method="post">
+        <fieldset>
+        <legend>Sus Datos</legend>
+
+        <label for="NombreyApellidos">Nombre y Apellidos:
+            <input type="text" id="NombreyApellidos" name="NombreyApellidos" maxlength="50">
+        </label><br>
+
+        <label for="Contraseña">Contraseña:
+            <input type="password" name="Contraseña" id="Contraseña" maxlength="8">
+        </label><br>
+
+        <label for="Usu">Usuario:
+            <input type="text" name="Usu" id="Usu" value="anonimo" disabled>
+        </label>
+
+        <p>Nivel:</p>
+
+        <label for="Profesional">
+            <input type="radio" name="Nivel" id="Profesional"> Profesional:
+        </label><br>
+
+        <label for="Avanzado">
+            <input type="radio" name="Nivel" id="Avanzado" checked> Avanzado:
+        </label><br>
+
+        <label for="Principiante">
+            <input type="radio" name="Nivel" id="Principiante"> Principiante:
+        </label><br>
+        </fieldset>
+        
+        <label for="Nacionalidad"> Nacionalidad:
+            <select name="Nacionalidad" id="Nacionalidad">
+                <option value="esp">España</option>
+                <option value="po">Portugal</option>
+                <option value="fr">Francia</option>
+                <option value="uk">Reino Unido</option>
+            </select>
+        </label>
+
+        <p>
+            <label for="descripción">Descripción:</label>
+        </p>
+
+        <p>
+                <textarea name="Descripción" id="descripción" rows="5" cols="30"></textarea>
+        </p>
+
+        <p>
+        <label for="deseo">
+            <input type="checkbox" name="deseo" id="deseo" checked> Deseo recibir información sobre novedades y ofertas
+        </label>
+        </p>
+
+        <p>
+        <label for="liedo">
+            <input type="checkbox" name="liedo" id="liedo"> Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre proteccióon de datos
+        </label>
+        </p>
+
+        <p>
+        <label for="foto">Adjnuntar foto:
+            <input type="file" name="foto" id="foto">
+        </label>
+        </p>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar Datos">
+    </form>
+</body>
+</html>
